@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ES2015; ES6学习笔记；常用知识点," />
 
 
 
@@ -57,15 +57,28 @@
 
 
 
-<meta name="description" content="Thinking Learning Sharing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xiaomin's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="模板字符串(Template Literals)模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+
+模板字符串的大括号内部，可以放入任意的JavaScript表达式，可以进行运算，以及引用对象属性。
+示例代码：
+123456var title = &apos;title&apos;,    id = 3;va">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES学习笔记--常用知识点">
+<meta property="og:url" content="http://yoursite.com/2016/07/09/ES6学习笔记-常用知识点/index.html">
 <meta property="og:site_name" content="Xiaomin's Blog">
-<meta property="og:description" content="Thinking Learning Sharing">
+<meta property="og:description" content="模板字符串(Template Literals)模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+
+模板字符串的大括号内部，可以放入任意的JavaScript表达式，可以进行运算，以及引用对象属性。
+示例代码：
+123456var title = &apos;title&apos;,    id = 3;va">
+<meta property="og:updated_time" content="2016-07-09T02:22:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xiaomin's Blog">
-<meta name="twitter:description" content="Thinking Learning Sharing">
+<meta name="twitter:title" content="ES学习笔记--常用知识点">
+<meta name="twitter:description" content="模板字符串(Template Literals)模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+
+模板字符串的大括号内部，可以放入任意的JavaScript表达式，可以进行运算，以及引用对象属性。
+示例代码：
+123456var title = &apos;title&apos;,    id = 3;va">
 
 
 
@@ -83,7 +96,7 @@
   };
 </script>
 
-  <title> Xiaomin's Blog </title>
+  <title> ES学习笔记--常用知识点 | Xiaomin's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -102,9 +115,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -183,24 +194,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-      
-      
-        
-        
-        
-      
-
-      
-    
-
-    
-      
 
   
   
@@ -220,10 +216,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/09/ES6学习笔记-常用知识点/" itemprop="url">
-                  ES学习笔记--常用知识点
-                </a>
+                ES学习笔记--常用知识点
               
             
           </h1>
@@ -280,9 +273,7 @@
       
 
       
-        
-          
-            <h3 id="u6A21_u677F_u5B57_u7B26_u4E32_28Template_Literals_29"><a href="#u6A21_u677F_u5B57_u7B26_u4E32_28Template_Literals_29" class="headerlink" title="模板字符串(Template Literals)"></a>模板字符串(Template Literals)</h3><pre><code>模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+        <h3 id="u6A21_u677F_u5B57_u7B26_u4E32_28Template_Literals_29"><a href="#u6A21_u677F_u5B57_u7B26_u4E32_28Template_Literals_29" class="headerlink" title="模板字符串(Template Literals)"></a>模板字符串(Template Literals)</h3><pre><code>模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
 
 模板字符串的大括号内部，可以放入任意的JavaScript表达式，可以进行运算，以及引用对象属性。
 </code></pre><p>示例代码：</p>
@@ -356,29 +347,45 @@
 <p>其实扩展运算符会调用默认的iterator接口, 所以，只要某个数据结构部署了Iterator接口，就可以对它使用扩展运算符，将其转为数组。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myIterable = &#123;&#125;;</span><br><span class="line"><span class="comment">// 使myIterable对象具有iterator接口，可以被扩展运算符遍历</span></span><br><span class="line">myIterable[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">3</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">[...myIterable] <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/ES2015-ES6学习笔记；常用知识点/" rel="tag">#ES2015; ES6学习笔记；常用知识点</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
 
-  </section>
-
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -386,6 +393,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -405,8 +416,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
@@ -453,6 +473,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6A21_u677F_u5B57_u7B26_u4E32_28Template_Literals_29"><span class="nav-number">1.</span> <span class="nav-text">模板字符串(Template Literals)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u9ED8_u8BA4_u53C2_u6570_28Default_Parameters_29"><span class="nav-number">2.</span> <span class="nav-text">默认参数(Default Parameters)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#let__26amp_3B_const__u547D_u4EE4_28block_scoped_uFF09"><span class="nav-number">3.</span> <span class="nav-text">let & const 命令(block scoped）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#let__u547D_u4EE4"><span class="nav-number">3.1.</span> <span class="nav-text">let 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const__u547D_u4EE4"><span class="nav-number">3.2.</span> <span class="nav-text">const 命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u6784_u8D4B_u503C_28Destructuring_Assignment_29"><span class="nav-number">4.</span> <span class="nav-text">解构赋值(Destructuring Assignment)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u589E_u5F3A_u5BF9_u8C61_u5B57_u9762_u91CF__28Enhanced_Object_Literals_29"><span class="nav-number">5.</span> <span class="nav-text">增强对象字面量 (Enhanced Object Literals)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7BAD_u5934_u51FD_u6570_28Arrow_Functions_29"><span class="nav-number">6.</span> <span class="nav-text">箭头函数(Arrow Functions)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7C7B_28Class_29"><span class="nav-number">7.</span> <span class="nav-text">类(Class)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6A21_u5757_28Modules_29"><span class="nav-number">8.</span> <span class="nav-text">模块(Modules)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6269_u5C55_u8FD0_u7B97_u7B26_28_u2026_29_u7684_u8FD0_u7528"><span class="nav-number">9.</span> <span class="nav-text">扩展运算符(…)的运用</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -527,6 +564,167 @@
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
