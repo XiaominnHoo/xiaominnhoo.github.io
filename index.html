@@ -212,6 +212,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/05/git-学习记录-持续更新ing/" itemprop="url">
+                  git 学习记录(持续更新ing)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-10-05T10:26:38+08:00" content="2016-10-05">
+              2016-10-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>平时工作中使用 git, 也就只会用常用的那几个命令，对 git 了解甚少，很多概念都了解不清晰，所以，有空就学习下 git，以此对某些概念更清晰，并以此做记录。</p>
+<h3 id="origin/HEAD"><a href="#origin/HEAD" class="headerlink" title="origin/HEAD"></a>origin/HEAD</h3><p>Q: 在执行git branch -r 查看远程分支命令时，有个 origin/HEAD -&gt; origin/master </p>
+<p>A: 表示clone repo 时会默认指定master 为checkout 的分支，可以通过命令 git remote set-head origin **设置改变默认 checkout 的分支</p>
+<h3 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h3><p>当前分支版本顶端的别名, 即在 当前分支的git 提交历史记录中，指向当前所在的位置，一般是指向最近的一次 commit， 但也可以是历史提交记录中的 某次commit</p>
+<h3 id="origin"><a href="#origin" class="headerlink" title="origin"></a>origin</h3><p>被clone 的远程仓库URL 的一个别名，clone repo时git 默认给定的，目的是 push时不需要输入一长串的 URL。例如：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> <span class="keyword">push </span>origin master</span><br></pre></td></tr></table></figure></p>
+<p>等价于<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> <span class="keyword">push </span>git<span class="comment">@*** master</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u64A4_u9500_u64CD_u4F5C"><a href="#u64A4_u9500_u64CD_u4F5C" class="headerlink" title="撤销操作"></a>撤销操作</h3><h4 id="git_commit__u2013amend"><a href="#git_commit__u2013amend" class="headerlink" title="git commit –amend"></a>git commit –amend</h4><p>使用场景是：某次提交，提交信息写错了，或是忘记提交了几个文件；</p>
+<ol>
+<li>如果提交后，没有任何改动，运行此命令，编辑提交说明，保存退出后，新的提交说明就会覆盖刚才的提交说明。</li>
+<li>如果提交后，添加忘记提交的文件到暂存区，再运行此命令，提交的内容就变成第一次 commit 的内容和 ammend 提交的内容了。</li>
+</ol>
+<h4 id="git_reset_HEAD_file_name"><a href="#git_reset_HEAD_file_name" class="headerlink" title="git reset HEAD file_name"></a>git reset HEAD file_name</h4><p>取消文件暂存</p>
+<h4 id="git_checkout__u2013_file_name"><a href="#git_checkout__u2013_file_name" class="headerlink" title="git checkout – file_name"></a>git checkout – file_name</h4><p>取消对文件的修改</p>
+<h3 id="u6539_u5199_u63D0_u4EA4_uFF08_u91CD_u7F6E_u64CD_u4F5C_uFF09"><a href="#u6539_u5199_u63D0_u4EA4_uFF08_u91CD_u7F6E_u64CD_u4F5C_uFF09" class="headerlink" title="改写提交（重置操作）"></a>改写提交（重置操作）</h3><p>reset命令做的事情就是重置HEAD(当前分支的版本顶端）到另外一个commit</p>
+<h4 id="git_reset__u2013hard_head_5E"><a href="#git_reset__u2013hard_head_5E" class="headerlink" title="git reset –hard head^"></a>git reset –hard head^</h4><p>重置最新的1次 commit: 也就是丢弃上次提交的修改，就像没有提交过一样。</p>
+<p>使用 git reset –hard命令要小心，保证执行此命令前的工作目录是干净的，否则可能会把工作目录中修改的内容也丢弃了。</p>
+<p>补充：</p>
+<ol>
+<li>git reset –hard head：会把当前工作目录中所有未提交的内容清空，让工作目录回到上次提交时的状态。</li>
+<li>head^ 中的^的表示head 之前的一个 commit, 等价于 head~1</li>
+<li>head~n: 表示 head 之前的n 个 commit。</li>
+</ol>
+<h4 id="git_reset__u2013soft_head_5E"><a href="#git_reset__u2013soft_head_5E" class="headerlink" title="git reset –soft head^"></a>git reset –soft head^</h4><p>这条命令和–hard 的区别是：不会丢弃上次提交的修改，上次提交的修改会在缓存（stage）区域。</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/13/Html5-History-Api-学习记录/" itemprop="url">
                   Html5 History Api 学习记录
                 </a>
@@ -614,21 +739,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分類</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
